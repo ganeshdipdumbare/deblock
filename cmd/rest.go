@@ -77,9 +77,6 @@ It sets up the necessary routes and listens for incoming HTTP requests.`,
 			os.Exit(1)
 		}
 
-		// Log loaded configuration details (be careful not to log sensitive information)
-		fmt.Printf("Configuration loaded successfully: %+v\n", config)
-
 		// Create blockchain client
 		blockchainClient, err := blockchain.NewEthereumClient(
 			logger,
