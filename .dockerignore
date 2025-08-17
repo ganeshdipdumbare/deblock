@@ -1,0 +1,61 @@
+# Git
+.git
+.gitignore
+
+# Build artifacts
+build/
+*.out
+coverage.html
+
+# Dependency directories
+vendor/
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Go test and coverage files
+*.test
+*.prof
+*.coverprofile
+
+# Compiled binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+deblock-txmonitor
+
+# Kubernetes and deployment files
+k8s/
+*.yaml
+*.yml
+
+# Documentation
+README.md
+LICENSE
+
+# Makefile and scripts
+Makefile
+scripts/
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore

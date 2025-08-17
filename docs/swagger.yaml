@@ -1,0 +1,75 @@
+basePath: /api/v1
+definitions:
+  rest.ErrorResponse:
+    properties:
+      message:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: ganeshdip.dumbare@gmail.com
+    name: Ganeshdip Dumbare
+    url: https://github.com/ganeshdipdumbare
+  description: This is a Deblock transaction monitor service API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Deblock Transaction Monitor API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      consumes:
+      - application/json
+      description: This endpoint is used to check the health of the server
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+      summary: Health check endpoint
+      tags:
+      - health
+  /txmonitor/start:
+    post:
+      consumes:
+      - application/json
+      description: Start the transaction monitor
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/rest.ErrorResponse'
+      summary: Start transaction monitor
+      tags:
+      - txmonitor
+  /txmonitor/stop:
+    post:
+      consumes:
+      - application/json
+      description: Stop the transaction monitor
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/rest.ErrorResponse'
+      summary: Stop transaction monitor
+      tags:
+      - txmonitor
+swagger: "2.0"
